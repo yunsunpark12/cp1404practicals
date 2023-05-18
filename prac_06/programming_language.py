@@ -13,4 +13,4 @@ class ProgrammingLanguage:
             return False
 
     def __str__(self):
-        return "{}, {} Typing, Reflection={}, First appeared in {}".format(self.field, self.typing, self.reflection, self.year)
+        return
