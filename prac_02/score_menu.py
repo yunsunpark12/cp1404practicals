@@ -1,5 +1,5 @@
 MENU = "(G)et a valid score\n(P)rint result\n(S)how stars\n(Q)uit"
-END_SCRIPT = "Finished"
+END_SCRIPT = "Farewell"
 ERROR_SCRIPT = "Invalid Input"
 ERROR_SCRIPT_NUMBER = "Score should be 0-100 inclusive."
 SCORE_SCRIPT_90 = "Excellent"
