@@ -17,7 +17,7 @@ def main():
     result_random_message = decide_message(random_score)
     print("Result for random score: ", result_random_message)
 
-
+# show appropriate message for user's score
 def decide_message(score):
     if score < 0 or score > 100:
         result_message = ERROR_SCRIPT
