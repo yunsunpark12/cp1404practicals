@@ -4,11 +4,6 @@ END_SCRIPT = "Thank you."
 
 def main():
     print(MENU)
-    get_choice()
-    print(END_SCRIPT)
-
-
-def get_choice():
     choice = input(">>> ").upper()
     while choice != "Q":
         if choice == "C":
@@ -25,6 +20,7 @@ def get_choice():
             print(ERROR_SCRIPT)
         print(MENU)
         choice = input(">>> ").upper()
+    print(END_SCRIPT)
 
 
 def calculate_celsius(fahrenheit):
