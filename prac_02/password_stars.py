@@ -12,8 +12,11 @@ consistent variable names and clear indenting as well as basic syntax like colon
 PASSWORD_LENGTH = 10
 ERROR_MESSAGE = "Password should be longer than 9 charcters."
 
-password = input("Enter password: ")
-while len(password) < PASSWORD_LENGTH:
-    print(ERROR_MESSAGE)
+def main()
     password = input("Enter password: ")
-print("*" * len(password))
+    while len(password) < PASSWORD_LENGTH:
+        print(ERROR_MESSAGE)
+        password = input("Enter password: ")
+    print("*" * len(password))
+
+main()
