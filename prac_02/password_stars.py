@@ -13,10 +13,17 @@ PASSWORD_LENGTH = 10
 ERROR_MESSAGE = "Password should be longer than 9 charcters."
 
 def main():
+    password = get_password()
+    print_asterisks(password)
+
+def get_password():
     password = input("Enter password: ")
     while len(password) < PASSWORD_LENGTH:
         print(ERROR_MESSAGE)
         password = input("Enter password: ")
+    return password
+
+def print_asterisks(password):
     print("*" * len(password))
 
 main()
