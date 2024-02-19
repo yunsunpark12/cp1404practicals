@@ -1,5 +1,5 @@
 PASSWORD_LENGTH = 10
-ERROR_MESSAGE = "Password should be longer than 9 charcters."
+ERROR_MESSAGE = "Password should be at least 10 characters."
 
 def main():
     password = get_password()
