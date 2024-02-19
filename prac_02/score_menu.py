@@ -11,11 +11,11 @@ def main():
     print(MENU)
     choice = input("Enter choice: ").upper()
 
-    while choice != "Q":
+    while choice != "Q":            # while choice is not Q, keep accepting user's menu choice
 
         if choice == "G":
             score = int(input("Enter score: "))
-            while score < 0 or score > 100:
+            while score < 0 or score > 100:         # error check to make sure score is 0-100 inclusive
                 print(ERROR_SCRIPT_NUMBER)
                 score = float(input("Enter score: "))
             decide_message(score)
@@ -31,11 +31,11 @@ def main():
 
     print(END_SCRIPT)
 
-
+# print asterisks as much as the score
 def show_stars(score):
     print("*" * score)
 
-
+# show appropriate message for user's score
 def decide_message(score):
     if score >= 90:
         result_message = SCORE_SCRIPT_90
