@@ -4,9 +4,9 @@ then opens a file called "6_name.txt" and writes that name to it.
 Remember to close your file.
 """
 
+# name = input("What is your name? ")
 # FILENAME = "6_name.txt"
 # out_file = open(FILENAME, 'w')
-# name = input("What is your name? ")
 # print(name, file = out_file)
 # out_file.close()
 
@@ -19,8 +19,8 @@ Write code that opens "name.txt" and reads the name (as above) then prints,
 # FILENAME = "6_name.txt"
 # in_file = open(FILENAME, 'r')
 # name = in_file.read().strip()
-# print("Your name is", name)
 # in_file.close()
+# print("Your name is", name)
 
 """
 Q3. Create a text file called numbers.txt and save it in your prac directory. 
@@ -39,16 +39,24 @@ and adds them together then prints the result, which should be... 59.
 # in_file.close()
 # print("Result: ", number_1 + number_2)
 
+FILENAME = "6_numbers.txt"
+total = 0
+in_file = open(FILENAME, 'r')
+for i in range(0,2):
+    number = int(in_file.readline())
+    total += number
+in_file.close()
+print("Result: ", total)
 """
 Q4. Now write a fourth block of code that prints 
 the total for all lines in numbers.txt or a file with any number of numbers.
 """
 
-FILENAME = "6_numbers.txt"
-total = 0
-in_file = open(FILENAME, 'r')
-for line in in_file:
-    number = int(line)
-    total += number
-in_file.close()
-print("Result: ", total)
+# FILENAME = "6_numbers.txt"
+# total = 0
+# in_file = open(FILENAME, 'r')
+# for line in in_file:
+#    number = int(line)
+#    total += number
+# in_file.close()
+# print("Result: ", total)
