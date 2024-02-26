@@ -5,7 +5,7 @@ MAX_DECREASE = 0.05  # 5%
 MIN_PRICE = 1
 MAX_PRICE = 100
 INITIAL_PRICE = 10.0
-FILENAME = "stock_output.txt"
+FILENAME = "3_stock_output.txt"
 
 def main():
     """At the end of every day there is a 50% chance
