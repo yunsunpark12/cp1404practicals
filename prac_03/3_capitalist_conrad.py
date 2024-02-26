@@ -5,7 +5,7 @@ MAX_DECREASE = 0.05  # 5%
 MIN_PRICE = 1
 MAX_PRICE = 100
 INITIAL_PRICE = 10.0
-
+FILENAME = "stock_output.txt"
 
 def main():
     """At the end of every day there is a 50% chance
@@ -13,9 +13,11 @@ def main():
     If the price rises above $1000, or falls below $0.01, the program ends.
     Displays day count and its daily stock price"""
 
+    out_file = open(FILENAME, 'w')
+
     number_of_days = 0
     price = INITIAL_PRICE
-    print("Starting price: $", INITIAL_PRICE)
+    print("Starting price: $", INITIAL_PRICE, file=out_file)
     while MIN_PRICE <= price <= MAX_PRICE:
         price_change = 0
         # generate a random integer of 1 or 2
@@ -31,7 +33,7 @@ def main():
 
         price *= (1 + price_change)
         number_of_days += 1
-        print(f"On day {number_of_days} price is : ${price:,.2f}")
+        print(f"On day {number_of_days} price is : ${price:,.2f}", file=out_file)
 
-
+    out_file.close()
 main()
