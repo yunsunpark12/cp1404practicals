@@ -7,12 +7,14 @@ FILENAME = "3_subject_data.txt"
 
 
 def main():
+    """Read data and display"""
     data = get_data()
-    print(data)
+    display_data(data)
 
 
 def get_data():
     """Read data from file formatted like: subject,lecturer,number of students."""
+    subject = []
     input_file = open(FILENAME)
     for line in input_file:
         print(line)  # See what a line looks like
@@ -24,6 +26,12 @@ def get_data():
         print(parts)  # See if that worked
         print("----------")
     input_file.close()
+    return subject
+
+def display_data(data):
+    """Display data"""
+    for i in data:
+        print(f"{i[0]} is taught by {i[1]:12} and has {i[2]:3} students")
 
 
 main()
