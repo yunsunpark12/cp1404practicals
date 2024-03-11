@@ -11,9 +11,9 @@ def main():
         name = get_name_from_email(email)
         user_confirmation = input(f"Is your name {name}? (Y/n)").lower()
         if user_confirmation == "n":
-        # get rid of number
+            # get rid of number and show name only
         else:
-    # display user name
+            # display user name and store both name&email to dictionary
     for  # iterate dic
         print(f"{# name} ({#email})")
 
