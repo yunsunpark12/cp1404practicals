@@ -4,16 +4,17 @@
 class Car:
     """Represent a Car object."""
 
-    def __init__(self, fuel=0):
+    def __init__(self, car_name=" ", fuel=0):
         """Initialise a Car instance.
 
         fuel: float, one unit of fuel drives one kilometre
         """
+        self.car_name = car_name
         self.fuel = fuel
         self.odometer = 0
 
     def __str__(self):
-        return f"Car, fuel={self.fuel}, odometer={self.odometer}"
+        return f"{self.car_name}, fuel={self.fuel}, odometer={self.odometer}"
 
     def add_fuel(self, amount):
         """Add amount to the car's fuel."""
